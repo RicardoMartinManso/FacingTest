@@ -24,6 +24,13 @@
 	//max-width:100%;
 }
 
+.splash2{
+	//height:100%;
+	width:70vh;
+	//max-height:380px;
+	//max-width:100%;
+}
+
 .boton
 {
 	backgroud-color:#18999E;
@@ -87,12 +94,34 @@
         text-align: center;
         padding: 8px;
     }
+	
+	.row {
+        margin: 0 auto;
+		max-width: 600px;
+        display: grid;
+		height:100vh;
+        grid-template-columns: 1fr; /* Size of items defined inside container */
+    }
+    .row div {
+        border: 1px dashed gray;
+        text-align: center;
+        padding: 12px;
+    }    
+
+    .row-2c {
+        grid-template-columns: 2fr 2fr;
+    }
+   
 
 }
 </style>
 <body>
 
-
+<div class="row">
+	<div><img src="rostro900_995.jpg" class="splash2" /></div>
+	<div>2</div>
+</div>
+	
 <div class="col">
 	<div>
 		<div class="row2" style="width:100%;max-width:400px">
