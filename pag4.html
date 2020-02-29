@@ -123,7 +123,13 @@
 	  align-items: center;
 	  flex-direction:column;
 	}
-	
+
+	.hijo {
+	  display: flex;
+	  background: red;
+	  height:100vh;
+	}
+
 	.padre2 {
 	  background: red;
 	  display: flex;
@@ -132,12 +138,11 @@
 	  flex-direction:column;
 	}
 
-	.hijo {
+	.hijo2 {
 	  display: flex;
 	  background: red;
-	  //width: 120px;
 	}
-
+	
 }
 </style>
 <body>
@@ -145,8 +150,8 @@
 <div class="padre">
 	<div class="hijo">
 		<div class="padre2">
-			<div class="hijo"><div><img src="rostro900_995.jpg" class="splash2"/></div></div>
-			<div class="hijo"><button class="boton">Efectuar fichaje</button></div>
+			<div class="hijo2"><div><img src="rostro900_995.jpg" class="splash2"/></div></div>
+			<div class="hijo2"><button class="boton">Efectuar fichaje</button></div>
 		</div>
 	</div>
 </div>
