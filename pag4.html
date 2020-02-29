@@ -3,19 +3,24 @@
 <title>Ejemplo de Superponer Imagenes</title>
 </head>
 <style type="text/css">
-.container {
+.container2 {
   height: 100%;
   display: grid;
   margin:0;
+  padding-top:0px;
+  margin-top:0px;
 }
-.centered {
+.centered2 {
   margin: 0 auto;
+  background-color:red;
+  padding-top:0px;
+  margin-top:0px;
 }
 
 .splash{
-	height:66vh;
-	max-height:380px;
-	max-width:100%;
+	height:80vh;
+	//max-height:380px;
+	//max-width:100%;
 }
 
 .boton
@@ -43,13 +48,15 @@
 }
 
   .row2 {
-        margin: 0px auto;
-        max-width: 300px;
+        margin: auto;
+        //max-width: 300px;
         display: flex;
 		flex-direction:column;
-		//background-color:red;
+		
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 		transition: 0.3s;
+		padding-top:0px;
+		//background-color:red;
     }
     .row2 >div {
         //border: 2px dashed gray;
@@ -61,15 +68,33 @@
 	.row2 >div:last-child{
 			padding-top:0px;
 		}
-
+	
+	.col {
+        margin: auto;
+        //max-width: 300px;
+        display: flex;
+		flex-direction:row;
+		
+		//box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		//transition: 0.3s;
+		padding-top:0px;
+		//background-color:red;
+    }
+    .col >div {
+        //border: 2px dashed gray;
+        flex: 1 1 auto; /* Size of items defined inside items */
+        text-align: center;
+        padding: 8px;
+    }
 
 }
 </style>
 <body>
 
-<div class="container">
-  <div class="centered">
-		<div class="row2">
+
+<div class="col">
+	<div>
+		<div class="row2" style="width:100%;max-width:400px">
 			<div>
 				<img src="rostro900_995.jpg" class="splash" />
 			</div>
@@ -77,8 +102,9 @@
 				<button class="boton">Efectuar fichaje</button>
 			</div>
 		</div>
-  </div>
+	</div>
 </div>
+
 
 
 </body>
