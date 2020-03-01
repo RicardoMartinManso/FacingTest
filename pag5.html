@@ -31,8 +31,9 @@
 }
 
 .splash3{
-	width:99%;
+	width:100%;
 	max-height:95vmin;
+	justify-self: center;
 }
 
 .boton
@@ -198,13 +199,15 @@
 		margin: 0 auto;
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 		transition: 0.3s;
+		padding:4px;
 	}
 	
 	.main-foto
 	{
 		grid-area: foto;
-		backgroud:red;
-		color:green;
+		//backgroud:red;
+		margin: 0 auto;
+		justify-content: center center;
 	}
 	
 	.main-datos
@@ -215,7 +218,8 @@
 		margin:auto;	
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 		transition: 0.3s;
-		width:35vw
+		width:35vw;
+		font-size:2vw;
 	}
 	
 	.main-botonera
@@ -228,7 +232,7 @@
 		
 		width:100%;
 		justify-self: center;
-		//align-self: center;
+		padding-bottom:6px;
 		
 	}
 
@@ -265,8 +269,33 @@
 	
 	@media screen and (max-width:500px)
 	{
-		.row {
+		.main-layout {
+			width:94vw;
+			margin: 0 auto;
+			grid-template-areas: 
+				"foto" 
+				"datos"
+				"botonera";
 			grid-template-columns: 2fr;
+		}
+		
+		.splash3{
+			width:99%;
+			//border:1px solid red;
+			max-height:67vh;
+			margin: 0 auto;
+		}
+		
+		.main-datos
+		{
+			width:99%;
+			box-shadow: none;
+			font-size:2.5vw;
+			line-height: 0.8;
+		}
+		
+		.botonC{
+			font-size:2.5vw;
 		}
 	}
 }
@@ -274,7 +303,7 @@
 <body>
 
 
-	
+<!--	
 <div class="padre">
 	<div class="hijo">
 		<div class="padre2">
@@ -283,19 +312,9 @@
 		</div>
 	</div>
 </div>
+-->
 
-<p>Grid CSS (CSS 4.0):</p>
-<div class="row">
-    <div><img src="rostro900_995.jpg" class="splash3"/></div>
-    <div>
-		<p>Empresa:</p>
-		<p>Acabados Fernandez S.A.</p>
-		<p>Trabajador:</p>
-		<p>Ricardo Martín Gonzalez</p>
-	</div>
-</div>
 
-<br/>
 <div class="main-layout">
 	<div class="main-foto"><img src="rostro900_995.jpg" class="splash3"/></div>
 	<div class="main-datos">
