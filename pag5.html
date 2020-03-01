@@ -30,6 +30,11 @@
 	//max-width:350px;
 }
 
+.splash3{
+	width:99%;
+	max-height:95vmin;
+}
+
 .boton
 {
 	backgroud-color:#18999E;
@@ -79,6 +84,9 @@
 	top:1px;
 }
 
+
+
+
   .row2 {
         margin: auto;
         //max-width: 300px;
@@ -121,17 +129,19 @@
 	
 	.row {
         margin: 0 auto;
-		max-width: 600px;
+		//max-width: 600px;
+		width:90%;
         display: grid;
-		height:100vh;
-        grid-template-columns: 1fr; /* Size of items defined inside container */
+		//height:100vh;
+        grid-template-columns: 1fr 1fr; /* Size of items defined inside container */
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 		transition: 0.3s;
     }
     .row div {
-        //border: 1px dashed gray;
+        border: 1px dashed gray;
         text-align: center;
-        padding: 12px;
+		flex-wrap: wrap;
+        //padding: 12px;
     }    
 
     .row-2c {
@@ -176,6 +186,89 @@
 	
 	html{font-size:100%;}
 	
+	.main-layout
+	{
+		display:grid;
+		//border:1px solid;
+		grid-template-columns: 2fr 3fr;
+		grid-template-areas: 
+		"foto datos" 
+		"foto botonera";
+		width:90%;
+		margin: 0 auto;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		transition: 0.3s;
+	}
+	
+	.main-foto
+	{
+		grid-area: foto;
+		backgroud:red;
+		color:green;
+	}
+	
+	.main-datos
+	{
+		grid-area: datos;
+		text-align:center;
+		align-items: center;
+		margin:auto;	
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		transition: 0.3s;
+		width:35vw
+	}
+	
+	.main-botonera
+	{
+		grid-area: botonera;
+		text-align:center;
+		justify-items: center;
+		align-items: center;
+		justify-content: center center;
+		
+		width:100%;
+		justify-self: center;
+		//align-self: center;
+		
+	}
+
+.botonC{
+	border-radius:4px;
+	border:1px solid #1E696F;
+	text-align:center;
+	cursor:pointer;
+	color:#FFFFFF;
+	font-family:Arial;
+	font-size:2vw;
+	margin-top:6px;
+	margin-bottom:6px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:6px;
+	padding-bottom:6px;
+	background-color:#1E696F; //#18999E;
+	width:35vw; //50%;	
+	margin:auto;		
+}
+
+.botonC:hover {
+	//background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	//background-color:#72b352;
+	
+	color:#18999E;
+}
+
+.botonC:active {
+	position:relative;
+	top:1px;
+}
+	
+	@media screen and (max-width:500px)
+	{
+		.row {
+			grid-template-columns: 2fr;
+		}
+	}
 }
 </style>
 <body>
@@ -191,7 +284,32 @@
 	</div>
 </div>
 
-<!--<a class="boton">Efectuar fichaje</a>-->
+<p>Grid CSS (CSS 4.0):</p>
+<div class="row">
+    <div><img src="rostro900_995.jpg" class="splash3"/></div>
+    <div>
+		<p>Empresa:</p>
+		<p>Acabados Fernandez S.A.</p>
+		<p>Trabajador:</p>
+		<p>Ricardo Martín Gonzalez</p>
+	</div>
+</div>
+
+<br/>
+<div class="main-layout">
+	<div class="main-foto"><img src="rostro900_995.jpg" class="splash3"/></div>
+	<div class="main-datos">
+		<p>Empresa:</p>
+		<p>Acabados Fernandez S.A.</p>
+		<p>Trabajador:</p>
+		<p>Ricardo Martín Gonzalez</p>
+	</div>
+	<div class="main-botonera"><div class="botonC">Efectuar fichaje</div></div>
+</div>
+<!--
+
+<a class="boton">Efectuar fichaje</a>
+-->
 
 </body>
 </html>  
